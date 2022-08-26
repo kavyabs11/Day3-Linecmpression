@@ -8,19 +8,39 @@ namespace Linecmp
 {
     public class LineCompression
     {
-        int x1, x2, y1, y2;
-        public LineCompression(int _x1, int _x2, int _y1, int _y2)
+        public void Length()
         {
-            this.x1 = _x1;
-            this.x2 = _x2;
-            this.y1 = _y1;
-            this.y2 = _y2;
-        }
-        public void CalculationLength()
-        {
-            double linelength = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
-            Console.WriteLine(linelength);
-        }
+
+        
+        Console.WriteLine("Enter the line point x1: ");
+            int x1 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter the line point x2: ");
+            int x2 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter the line point y1: ");
+            int y1 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter the line point y2: ");
+            int y2 = Convert.ToInt32(Console.ReadLine());
+        var Length1 = Math.Sqrt((Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2)));
+        Console.WriteLine(Length1);
+            Console.WriteLine("Enter the line point x3: ");
+            int x3 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter the line point x4: ");
+            int x4 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter the line point y3: ");
+            int y3 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter the line point y4: ");
+            int y4 = Convert.ToInt32(Console.ReadLine());
+        var Length2 = Math.Sqrt((Math.Pow(x3 - x4, 2) + Math.Pow(y3 - y4, 2)));
+        Console.WriteLine(Length2);
+            if (Length1.Equals(Length2))
+            {
+                Console.WriteLine("The two lines are equal");
+            }
+            else
+            {
+                Console.WriteLine("The two lines are not equal");
+            }
+        }       
     }
 
 }
